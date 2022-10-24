@@ -48,8 +48,7 @@ export default class UserTable {
 
   handleClick(event) {
     if (event.target.id) {
-      console.log(event.target.id);
-      this.deleteRow(event.target.id);
+      event.target.closest('tr').remove();
     }
   }
 }
