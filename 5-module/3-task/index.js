@@ -1,8 +1,8 @@
 function initCarousel() {
   const body = document.body;
 
-  const rightArrow = body.querySelector('.carousel__arrow_right');
-  const leftArrow = body.querySelector('.carousel__arrow_left');
+  const rightArrow = body.querySelector('.carousel__arrow_left');
+  const leftArrow = body.querySelector('.carousel__arrow_right');
   const carousel = body.querySelector('.carousel__inner');
   const carChildWidth = carousel.querySelector('.carousel__slide').offsetWidth;
   const elementsCount = carousel.querySelectorAll('.carousel__slide').length;
