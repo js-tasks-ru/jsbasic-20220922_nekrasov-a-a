@@ -16,18 +16,20 @@
 export default class UserTable {
   generateTable(rows) {
     let table = document.createElement('table');
+    let tBody = table.createTBody();
     const tableHeaders = ["Имя", "Возраст", "Зарплата", "Город"];
 
     let header = table.createTHead();
     let tHead = header.insertRow();
     tableHeaders.forEach(key => {
-      let text = document.createTextNode(key);
-      tHead.insertCell().appendChild(text);
+      const headerCell = document.createElement('th');
+      headerCell.innerText = key;
+      tHead.appendChild(headerCell);
     });
 
 
     for (let [id, element] of Object.entries(rows)) {
-      let row = table.insertRow();
+      let row = tBody.insertRow();
       for (let key of Object.keys(element)) {
         let cell = row.insertCell();
         let text = document.createTextNode(element[key]);
