@@ -6,7 +6,7 @@ describe('6-module-1-task', () => {
   let clickEvent;
 
   beforeEach(() => {
-    clickEvent = new MouseEvent('click', { bubbles: true });
+    clickEvent = new MouseEvent('click', {bubbles: true});
 
     let rows = [
       {
